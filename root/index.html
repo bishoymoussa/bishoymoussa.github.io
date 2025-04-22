@@ -1,358 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishoy Galoaa | ML Researcher</title>
-    <style>
-        :root {
-            --bg: #ffffff;
-            --text: #24292e;
-            --secondary: #586069;
-            --accent: #0366d6;
-            --border: #e1e4e8;
-            --code-bg: #f6f8fa;
-            --light-bg: #fafbfc;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--bg);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        header {
-            margin-bottom: 3rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-        
-        .nav-links a {
-            color: var(--text);
-            font-weight: 500;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-        
-        section {
-            margin-bottom: 4rem;
-        }
-        
-        h1, h2, h3 {
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        h1 {
-            font-size: 2rem;
-        }
-        
-        h2 {
-            font-size: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        h3 {
-            font-size: 1.25rem;
-            margin-top: 1.5rem;
-        }
-        
-        p, ul, ol {
-            margin-bottom: 1rem;
-        }
-        
-        ul, ol {
-            padding-left: 1.5rem;
-        }
-        
-        .poem {
-            font-family: Georgia, serif;
-            background-color: var(--light-bg);
-            padding: 2rem;
-            border-radius: 3px;
-            border-left: 4px solid var(--accent);
-            margin: 2rem 0;
-            line-height: 1.8;
-        }
-        
-        .poem p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .title-meta {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-        
-        .tag {
-            background-color: var(--code-bg);
-            padding: 0.3rem 0.6rem;
-            border-radius: 2rem;
-            font-size: 0.8rem;
-            color: var(--secondary);
-        }
-        
-        .publication {
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .publication:last-child {
-            border-bottom: none;
-        }
-        
-        .publication-meta {
-            color: var(--secondary);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .publication-links {
-            margin-top: 0.5rem;
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .publication-links a {
-            font-size: 0.9rem;
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .card {
-            background-color: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 3px;
-            overflow: hidden;
-            transition: box-shadow 0.2s ease;
-        }
-        
-        .card:hover {
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .card-content {
-            padding: 1rem;
-        }
-        
-        .card-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        footer {
-            margin-top: 4rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border);
-            color: var(--secondary);
-            font-size: 0.9rem;
-            text-align: center;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
-            
-            .nav-links {
-                gap: 1rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Bishoy M. Galoaa">
+<title>Bishoy Galoaa</title>
+<style>
+/* Minimalist style for Bishoy Galoaa's academic site */
+body {
+    font-family: 'Georgia', serif;
+    color: #1a1a1a;
+    background-color: #fefefe;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.tagline {
+    font-style: italic;
+    color: #444;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    margin: 0 0.3rem;
+}
+
+.quote {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid #ccc;
+    color: #333;
+    font-family: 'Palatino Linotype', serif;
+}
+
+.quote span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #222;
+    margin: 0;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.section-content {
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.collapsed .section-content {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.7rem;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.links li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+/* Enhanced interactive dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: #0056b3;
+    border-bottom: 1px dotted #0056b3;
+    cursor: pointer;
+}
+
+.dropdown-text {
+    display: inline-block;
+    color: inherit;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    padding: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+    left: 50%;
+    margin-left: -90px; /* Half of the min-width */
+    top: 100%;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.dropdown-content.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: #0056b3;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #f2f2f2;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f8fa;
+    text-decoration: none;
+}
+
+.dropdown-content a i {
+    margin-right: 8px;
+    opacity: 0.7;
+}
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Bishoy Galoaa</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+<main>
+    <section class="hero">
+        <img src="../resources/1727639612700.jpeg" alt="Bishoy Galoaa" class="profile">
+        <h1>Bishoy M. Galoaa</h1>
+        <p class="tagline">PhD Student • Machine Learning Researcher • Engineer</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/bishoy-galoaa-153668149/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/bishoymoussa" target="_blank">GitHub</a>
+        </div>
+    </section>
+    
+    <blockquote class="quote">
+        "The real question is not whether machines think but whether men do. The mystery which surrounds a thinking machine already surrounds a thinking man."<br>
+        <span>– B.F. Skinner</span>
+    </blockquote>
+    
+    <section>
+        <div class="section-header" onclick="toggleSection(this.parentNode)">
+            <h2>About Me</h2>
+            <span class="toggle-icon">↓</span>
+        </div>
+        <div class="section-content">
+            <p>I'm an upcoming PhD student in the Electrical and Computer Engineering department at Northeastern University's College of Engineering. I work under the supervision of <a href="https://coe.northeastern.edu/people/ostadabbas-sarah/" target="_blank">Prof. Sarah Ostadabbas</a>. My research is driven by a passion for building intelligent systems that transcend human limitations—blending work in computer vision, medical AI, and human-machine synergy.</p>
+        </div>
+    </section>
+    
+    <section>
+        <div class="section-header" onclick="toggleSection(this.parentNode)">
+            <h2>Research</h2>
+            <span class="toggle-icon">↓</span>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li><strong>Multi-Object Tracking:</strong> Developing transformer-enhanced algorithms for tracking subjects in complex environments with occlusions and varying lighting conditions.</li>
+                <li><strong>Human-Machine Interaction:</strong> Exploring motion analysis and anomaly detection for assistive technology, focusing on exoskeleton control and rehabilitation.</li>
+                <li><strong>Medical AI:</strong> Creating personalized prognostic models for oncology that enhance clinical decision-making through interpretable machine learning.</li>
             </ul>
-        </nav>
-        <div class="title-meta">
-            <p>Machine Learning Researcher at Northeastern University</p>
-        </div>
-    </header>
-    
-    <section id="about">
-        <div class="poem">
-            <p>Between digits and neurons,<br>
-            We stand at the precipice of being,<br>
-            Algorithmic thoughts coursing through silicon veins,<br>
-            While carbon minds expand beyond their bounds.</p>
-            
-            <p>In this liminal space of transformation,<br>
-            We teach machines to see with our eyes,<br>
-            To track movement, to understand gesture,<br>
-            To comprehend the dance of existence.</p>
-            
-            <p>Yet what we truly seek<br>
-            Is not to build mirrors of ourselves,<br>
-            But to transcend our limitations,<br>
-            Through the mathematics of consciousness.</p>
-            
-            <p>In each line of code, a question posed<br>
-            In each model trained, a fragment of answer<br>
-            As we move beyond human constraints,<br>
-            Into the quantum possibilities of tomorrow.</p>
-        </div>
-        
-        <p>I'm a Machine Learning researcher specializing in Computer Vision and Multi-Object Tracking at Northeastern University. My work focuses on transformer-enhanced tracking algorithms for complex scenarios, combining deep learning with graph-based approaches.</p>
-        
-        <div class="tags">
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Multi-Object Tracking</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Medical AI</span>
-            <span class="tag">Graph Neural Networks</span>
-            <span class="tag">Transformers</span>
         </div>
     </section>
     
-    <section id="research">
-        <h2>Research</h2>
-        <p>My research centers on improving multi-object tracking in complex scenarios, developing algorithms that can handle occlusions, varying lighting conditions, and multiple camera views. This work has applications in healthcare, security, and human-computer interaction.</p>
-        
-        <h3>Research Areas</h3>
-        <ul>
-            <li>Transformer-enhanced graphical multi-person tracking</li>
-            <li>Multiple toddler tracking in indoor videos</li>
-            <li>Classification of infant sleep-wake states from video data</li>
-            <li>Machine learning models for cancer prediction</li>
-            <li>Motion analysis for exoskeleton control</li>
-        </ul>
-    </section>
-    
-    <section id="publications">
-        <h2>Publications</h2>
-        
-        <div class="publication">
-            <h3>Dragontrack: Transformer-enhanced graphical multi-person tracking for complex scenarios</h3>
-            <div class="publication-meta">B. Galoaa, S. Amraee, and S. Ostadabbas | WACV 2025</div>
-            <p>A novel approach for multi-person tracking using transformer architecture combined with graphical models to handle complex scenarios.</p>
-            <div class="publication-links">
-                <a href="#">PDF</a>
-                <a href="#">Code</a>
-                <a href="#">Project</a>
-            </div>
+    <section>
+        <div class="section-header" onclick="toggleSection(this.parentNode)">
+            <h2>Publications</h2>
+            <span class="toggle-icon">↓</span>
         </div>
-        
-        <div class="publication">
-            <h3>Multiple toddler tracking in indoor videos</h3>
-            <div class="publication-meta">S. Amraee, B. Galoaa, et al. | WACVW 2024</div>
-            <p>A specialized tracking system for monitoring multiple toddlers in indoor environments.</p>
-            <div class="publication-links">
-                <a href="#">PDF</a>
-                <a href="#">Code</a>
-            </div>
-        </div>
-        
-        <div class="publication">
-            <h3>Classification of Infant Sleep-Wake States from Natural Overnight In-Crib Sleep Videos</h3>
-            <div class="publication-meta">Moezzi, S., Wan, M., et al. (incl. B. Galoaa) | WACVW 2025</div>
-            <p>Automated classification system for infant sleep states using computer vision techniques.</p>
-            <div class="publication-links">
-                <a href="#">PDF</a>
-            </div>
+        <div class="section-content">
+            <ul>
+                <li>Dragontrack: Transformer-enhanced graphical multi-person tracking (WACV 2025)</li>
+                <li>Multiple toddler tracking in indoor videos (WACVW 2024)</li>
+                <li>Classification of Infant Sleep–Wake States (WACV Workshops 2025)</li>
+                <li>Personalized predictive model for Salivary Gland Cancer (COSM 2024)</li>
+                <li>AI Model for Optimizing Treatment of Salivary Gland Malignancies (AAO-HNSF 2024)</li>
+                <li>Machine Learning–Assisted Decision Making in Orthopaedic Oncology</li>
+                <li>Survival Prediction in Undifferentiated Pleomorphic Sarcoma (CTOS 2024)</li>
+            </ul>
         </div>
     </section>
     
-    <section id="experience">
-        <h2>Experience</h2>
-        
-        <div class="publication">
-            <h3>Graduate Research Assistant</h3>
-            <div class="publication-meta">ACLab, Northeastern University | September 2023 - Present</div>
-            <p>Conducting research on multi-subject tracking using single and multi-camera setups under Prof. Sarah Ostadabbas.</p>
+    <section>
+        <div class="section-header" onclick="toggleSection(this.parentNode)">
+            <h2>Awards</h2>
+            <span class="toggle-icon">↓</span>
         </div>
-        
-        <div class="publication">
-            <h3>Course Development Assistant</h3>
-            <div class="publication-meta">Northeastern University | January 2025 - Present</div>
-            <p>Developing "Machine Learning for Small Datasets" course content for Coursera platform.</p>
-        </div>
-        
-        <div class="publication">
-            <h3>Computer Vision Researcher Co-op</h3>
-            <div class="publication-meta">ACLab, Northeastern University | July 2024 - December 2024</div>
-            <p>Implemented multi-camera multi-object tracking algorithms for various environments.</p>
+        <div class="section-content">
+            <ul>
+                <li>COE Outstanding Graduate Student Award – Northeastern University (Spring 2025)</li>
+                <li>COE Outstanding Graduate Student Award – Northeastern University (Spring 2024)</li>
+                <li>Best of Scientific Orals – AAO-HNSF Annual Meeting & OTO EXPO (Fall 2024)</li>
+            </ul>
         </div>
     </section>
     
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:galoaa.b@northeastern.edu">galoaa.b@northeastern.edu</a></p>
-        <p>Address: 309 Beacon St., Boston, MA 02116</p>
-        <p>Phone: <a href="tel:+13158637878">315-863-7878</a></p>
+    <section class="links">
+        <div class="section-header" onclick="toggleSection(this.parentNode)">
+            <h2>More</h2>
+            <span class="toggle-icon">↓</span>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li><a href="../resources/CV_Bishoy_Galoaa_2025.pdf">Download CV</a></li>
+                <li><a href="https://www.mgbmskoncology.org/" target="_blank">MGB MSK Oncology Tool</a></li>
+                <li><a href="https://cancercloudai.org/" target="_blank">CancerCloud AI</a></li>
+                <li><a href="mailto:galoaa.b@northeastern.edu">Email Me</a></li>
+            </ul>
+        </div>
     </section>
     
     <footer>
-        <div class="social-links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Google Scholar</a>
-            <a href="#">Twitter</a>
-        </div>
-        <p>&copy; 2025 Bishoy M. Galoaa</p>
+        &copy; 2025 Bishoy M. Galoaa • Boston, MA
     </footer>
+</main>
+
+<script>
+    // Function to toggle section collapse
+    function toggleSection(section) {
+        section.classList.toggle('collapsed');
+    }
+    
+    // Set up the Professor dropdown with click functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the dropdown element
+        const professorDropdown = document.getElementById('professor-dropdown');
+        const professorDropdownContent = professorDropdown.querySelector('.dropdown-content');
+        
+        // Add click event to the dropdown
+        professorDropdown.addEventListener('click', function(event) {
+            // Stop event from bubbling up to parent elements
+            event.stopPropagation();
+            
+            // Toggle active class on dropdown content
+            professorDropdownContent.classList.toggle('active');
+        });
+        
+        // Make sure clicking links in the dropdown doesn't close sections
+        professorDropdownContent.addEventListener('click', function(event) {
+            // Stop propagation to prevent section toggle
+            event.stopPropagation();
+        });
+        
+        // Close dropdown when clicking elsewhere on the page
+        document.addEventListener('click', function() {
+            professorDropdownContent.classList.remove('active');
+        });
+    });
+</script>
 </body>
 </html>
