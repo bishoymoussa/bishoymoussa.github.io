@@ -124,10 +124,24 @@ h2 {
 ul {
     list-style: disc;
     padding-left: 1.5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 li {
     margin-bottom: 0.7rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.section-content {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 a {
@@ -232,6 +246,54 @@ footer {
     margin-right: 8px;
     opacity: 0.7;
 }
+
+.insight-box {
+    background: #f9f9f9;
+    border-left: 3px solid #888;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    border-radius: 0 6px 6px 0;
+}
+.insight-box p { margin: 0 0 0.6rem 0; font-size: 0.95rem; color: #333; }
+.insight-box p:last-child { margin-bottom: 0; }
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 1rem auto 0.5rem auto;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    max-width: 560px;
+}
+.video-wrap video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+}
+.video-caption {
+    font-size: 0.82rem;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.3rem;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-family: 'Georgia', serif;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+.badge-oral { background: #e8f4e8; color: #2a6e2a; border: 1px solid #b0d8b0; }
+.badge-spotlight { background: #fff4e0; color: #7a4f00; border: 1px solid #f5d080; }
+.badge-nominee { background: #f0eaff; color: #4a2a8a; border: 1px solid #c5aff0; }
+.badge-preprint { background: #f5f5f5; color: #555; border: 1px solid #ccc; }
+.badge-new { background: #fdecea; color: #8a1a0a; border: 1px solid #f5b0a0; }
 </style>
 </head>
 <body>
@@ -243,7 +305,8 @@ footer {
         <div class="social-links">
             <a href="https://www.linkedin.com/in/bishoy-galoaa-153668149/" target="_blank">LinkedIn</a> |
             <a href="https://github.com/bishoymoussa" target="_blank">GitHub</a> |
-            <a href="https://scholar.google.com/citations?user=tuwQ2GgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            <a href="https://scholar.google.com/citations?user=tuwQ2GgAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+            <a href="mailto:galoaa.b@northeastern.edu">galoaa.b@northeastern.edu</a>
         </div>
     </section>
     
@@ -258,20 +321,39 @@ footer {
             <span class="toggle-icon">↓</span>
         </div>
         <div class="section-content">
-            <p>I'm an upcoming PhD student in the Electrical and Computer Engineering department at Northeastern University's College of Engineering. I work under the supervision of <a href="https://coe.northeastern.edu/people/ostadabbas-sarah/" target="_blank">Prof. Sarah Ostadabbas</a> in the <a href="https://ostadabbas.sites.northeastern.edu/" target="_blank">Augmented Cognition Lab (ACLab)</a>. My research is driven by a passion for building intelligent systems that transcend human limitations—blending work in computer vision, medical AI, and human-machine synergy.</p>
+            <p>I'm an upcoming PhD student in the Electrical and Computer Engineering department at Northeastern University's College of Engineering. I work under the supervision of <a href="https://coe.northeastern.edu/people/ostadabbas-sarah/" target="_blank">Prof. Sarah Ostadabbas</a> in the <a href="https://ostadabbas.sites.northeastern.edu/" target="_blank">Augmented Cognition Lab (ACLab)</a>. My research centers on <strong>motion-centric video understanding and reasoning</strong> — building systems that don't merely extrapolate visual patterns, but <em>deduce</em> causal structure from observed motion. I'm particularly interested in how vision-language models can move beyond statistical pattern completion toward genuine physical and spatial reasoning. This connects to broader work in multi-object tracking, human-machine interaction, and medical AI.</p>
         </div>
     </section>
     
     <section>
         <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>Research</h2>
+            <h2>Motion-Centric Reasoning &amp; Vision-Language Models</h2>
             <span class="toggle-icon">↓</span>
         </div>
         <div class="section-content">
+            <p>A core challenge I'm pursuing: most current VLMs act as <em>stochastic extrapolators</em>. Trained on massive visual corpora, they bias toward the statistically probable — a pendulum seen swinging to Point B is predicted to return to Point A, because that completes a symmetric arc. But this ignores the physics: initial conditions, energy dissipation, non-conservative forces. The model pattern-matches; it doesn't <em>reason</em>.</p>
+
+            <div class="insight-box">
+                <p><strong>The Extrapolator vs. The Visual Observer</strong></p>
+                <p><strong>Extrapolator (current VLMs):</strong> sees the arc → assumes a periodic function → predicts completion. Prioritizes visual symmetry over physical constraints.</p>
+                <p><strong>Visual Observer (the goal):</strong> observes initial state, recognizes constraints (fixed pivot, gravity, friction), accounts for hidden dissipative variables → deduces that the return height must be h<sub>final</sub> &lt; h<sub>initial</sub>.</p>
+                <p>Walter Lewin famously put his nose — and his life — on the line to demonstrate this principle:</p>
+                <div class="video-wrap">
+                    <video controls autoplay width="560" height="315">
+                        <source src="resources/motion_demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="video-caption">Prof. Walter Lewin releases a 15 kg pendulum from his chin. He trusts physics — a true push would smash his face. Energy is conserved, not extrapolated.</p>
+                <p style="margin-top:0.8rem; font-size:0.9rem;">My work on motion-centric systems aims to bridge this gap: from pattern completion to causal deduction.</p>
+            </div>
+
             <ul>
-                <li><strong>Multi-Object Tracking:</strong> Developing transformer-enhanced algorithms for tracking subjects in complex environments with occlusions and varying lighting conditions.</li>
-                <li><strong>Human-Machine Interaction:</strong> Exploring motion analysis and anomaly detection for assistive technology, focusing on exoskeleton control and rehabilitation.</li>
-                <li><strong>Medical AI:</strong> Creating personalized prognostic models for oncology that enhance clinical decision-making through interpretable machine learning.</li>
+                <li><strong>Motion-Centric Video Understanding:</strong> Query-free motion discovery and description systems that autonomously identify and describe events in videos, and text-to-motion generation (Lang2Motion) enabling natural language control of motion synthesis.</li>
+                <li><strong>Multi-Object Tracking:</strong> Transformer-enhanced and graph-based algorithms for tracking in complex environments — including occlusions, crowded scenes, and multi-camera setups.</li>
+                <li><strong>Spatial Reasoning in VLMs:</strong> Learning structured spatial and counting reasoning from pedagogically-organized video content.</li>
+                <li><strong>Human-Machine Interaction:</strong> Motion analysis and uncertainty-aware anomaly detection for exoskeleton control and rehabilitation.</li>
+                <li><strong>Medical AI:</strong> Personalized prognostic models for oncology via interpretable machine learning.</li>
             </ul>
         </div>
     </section>
@@ -281,22 +363,85 @@ footer {
             <h2>Publications</h2>
             <span class="toggle-icon">↓</span>
         </div>
-        <div class="section-content">
+        <div class="section-content" style="display: block; max-height: none; opacity: 1;">
+            <p style="font-weight:bold; color:#222; margin-bottom:0.5rem;">2026</p>
             <ul>
-                <li>UniTrack: Differentiable Graph Representation Learning for Multi-Object Tracking (ICLR 2026) (Poster)</li>
-                <li>K-Track: Kalman-Enhanced Tracking for Accelerating Deep Point Trackers on Edge Devices (WACVW 2026) (Poster)</li>
-                <li>LAPA: Look Around and Pay Attention: Multi-camera Point Tracking Reimagined with Transformers (3DV 2026) (Oral)</li>
-                <li>Uncertainty-Aware Real-Time Exoskeleton Control (arxiv preprint 2025)</li>
-                <li>SPARTAN: Spatiotemporal Pose-Aware Retrieval for Text-guided Autonomous Navigation (BMVC 2025) (Poster)</li>
-                <li>More Than Meets the Eye: Enhancing Multi-Object Tracking Even with Prolonged Occlusions (ICML 2025) (Poster)</li>
-                <li>Dragontrack: Transformer-enhanced graphical multi-person tracking (WACV 2025)</li>
-                <li>Classification of Infant Sleep–Wake States (WACVW 2025)</li>
-                <li>Multiple toddler tracking in indoor videos (WACVW 2024)</li>
-                <li>Real-Time Uncertainty Detection for Safe, Adaptive Exoskeleton Control (ICRA Workshops 2025)</li>
-                <li>Personalized predictive model for Salivary Gland Cancer (COSM 2024)</li>
-                <li>AI Model for Optimizing Treatment of Salivary Gland Malignancies (AAO-HNSF 2024)</li>
-                <li>Machine Learning–Assisted Decision Making in Orthopaedic Oncology</li>
-                <li>Survival Prediction in Undifferentiated Pleomorphic Sarcoma (CTOS 2024)</li>
+                <li>
+                    <strong>MoReGen: Multi-Agent Motion-Reasoning Engine for Code-based Text-to-Video Synthesis</strong><br>
+                    X. Bai, H. Liang, <em>B. Galoaa</em>, et al. — CVPR 2026
+                    <span class="badge badge-new">New</span>
+                </li>
+                <li>
+                    <strong>UniTrack: Differentiable Graph Representation Learning for Multi-Object Tracking</strong><br>
+                    <em>B. Galoaa</em>, X. Bai, U. Nandi, S. Amraee, S. Ostadabbas — ICLR 2026
+                    <span class="badge badge-spotlight">Nectar Track · Spotlight Oral · 3DV 2026</span>
+                </li>
+                <li>
+                    <strong>K-Track: Kalman-Enhanced Tracking for Accelerating Deep Point Trackers on Edge Devices</strong><br>
+                    <em>B. Galoaa</em>, P. Closas, S. Ostadabbas — WACVW 2026
+                </li>
+                <li>
+                    <strong>LAPA: Look Around and Pay Attention — Multi-camera Point Tracking Reimagined with Transformers</strong><br>
+                    <em>B. Galoaa</em>, X. Bai, S. Moezzi, et al. — 3DV 2026
+                    <span class="badge badge-oral">Oral</span>
+                    <span class="badge badge-nominee">Best Paper Nominee</span>
+                </li>
+            </ul>
+
+            <p style="font-weight:bold; color:#222; margin-bottom:0.5rem; margin-top:1rem;">2025</p>
+            <ul>
+                <li><strong>SPARTAN: Spatiotemporal Pose-Aware Retrieval for Text-Guided Autonomous Navigation</strong><br>
+                    X. Bai, S. A. Sreeramagiri, <em>B. Galoaa</em>, et al. — BMVC 2025</li>
+                <li><strong>More Than Meets the Eye: Enhancing Multi-Object Tracking with Softmax Splatting and Optical Flow</strong><br>
+                    <em>B. Galoaa</em>, S. Amraee, S. Ostadabbas — ICML 2025</li>
+                <li><strong>Dragontrack: Transformer-Enhanced Graphical Multi-Person Tracking</strong><br>
+                    <em>B. Galoaa</em>, S. Amraee, S. Ostadabbas — WACV 2025</li>
+                <li><strong>Classification of Infant Sleep–Wake States from Natural Overnight In-Crib Videos</strong><br>
+                    S. Moezzi, M. Wan, <em>B. Galoaa</em>, et al. — WACVW 2025</li>
+                <li><strong>Advancing Prognostics in Oncology: ML Models for Predicting Survival in Undifferentiated Pleomorphic Sarcoma</strong><br>
+                    A. G. Girgis, <em>B. M. Galoaa</em>, et al. — Annals of Surgical Oncology, 2025</li>
+                <li><strong>Predicting Long-Term Survival in Myxofibrosarcoma</strong><br>
+                    S. Rampam, A. G. Girgis, <em>B. M. Galoaa</em>, et al. — Surgical Oncology, 2025</li>
+                <li><strong>Extraskeletal Osteosarcoma: MicroRNA Patterns</strong><br>
+                    S. A. Lozano-Calderon, <em>B. M. Galoaa</em>, et al. — CTOS 2025</li>
+                <li><strong>Real-Time Uncertainty Detection for Safe, Adaptive Exoskeleton Control</strong><br>
+                    <em>B. Galoaa</em> et al. — ICRA Workshops 2025</li>
+            </ul>
+
+            <p style="font-weight:bold; color:#222; margin-bottom:0.5rem; margin-top:1rem;">2024</p>
+            <ul>
+                <li><strong>Multiple Toddler Tracking in Indoor Videos</strong><br>
+                    S. Amraee, <em>B. Galoaa</em>, et al. — WACVW 2024</li>
+                <li><strong>A Personalized Predictive Model for Salivary Gland Cancer</strong><br>
+                    A. Girgis, <em>B. Galoaa</em>, A. Devaiah — COSM 2024</li>
+                <li><strong>A Novel AI Model for Optimizing Treatment of Salivary Gland Malignancies</strong><br>
+                    A. Girgis, <em>B. Galoaa</em>, A. Devaiah — AAO-HNSF 2024</li>
+                <li><strong>Bias or Best Fit? SEER vs. NCDB in ML for Osteosarcoma Survival</strong><br>
+                    A. G. Girgis, <em>B. M. Galoaa</em>, et al. — Clinical Orthopaedics and Related Research, 2024</li>
+                <li><strong>Machine Learning–Assisted Decision Making in Orthopaedic Oncology</strong><br>
+                    P. A. Rizk, M. R. Gonzalez, <em>B. M. Galoaa</em>, et al. — accepted for publication</li>
+            </ul>
+
+            <p style="font-weight:bold; color:#222; margin-bottom:0.5rem; margin-top:1rem;">Preprints &amp; Under Review</p>
+            <ul>
+                <li><strong>Structured Over Scale: Learning Spatial Reasoning from Educational Video</strong><br>
+                    B. Galoaa, X. Bai, and S. Ostadabbas — under review, 2026
+                    <span class="badge badge-preprint">Preprint</span></li>
+                <li><strong>Track and Caption Any Motion: Query-Free Motion Discovery and Description in Videos</strong><br>
+                    B. Galoaa and S. Ostadabbas — under review, 2026
+                    <span class="badge badge-preprint">Preprint</span></li>
+                <li><strong>Lang2Motion: Bridging Language and Motion Through Joint Embedding Spaces</strong><br>
+                    B. Galoaa, X. Bai, and S. Ostadabbas — under review, 2026
+                    <span class="badge badge-preprint">Preprint</span></li>
+                <li><strong>Uncertainty-Aware Ankle Exoskeleton Control</strong><br>
+                    F. M. Tourk, B. Galoaa, S. Shajan, A. J. Young, M. Everett, and M. K. Shepherd — arXiv preprint arXiv:2508.21221, 2025
+                    <span class="badge badge-preprint">arXiv</span></li>
+                <li><strong>Cognitive Learning through Hierarchical Prototypes and Dynamic Focus</strong><br>
+                    <em>B. Galoaa</em>, S. Ostadabbas — under review, 2025
+                    <span class="badge badge-preprint">Preprint</span></li>
+                <li><strong>ML Algorithms for Survival Prediction in Synovial Sarcoma</strong><br>
+                    J. O. Werenski, S. Rampam, <em>B. Galoaa</em>, et al. — under review
+                    <span class="badge badge-preprint">Preprint</span></li>
             </ul>
         </div>
     </section>
@@ -335,10 +480,13 @@ footer {
         </div>
         <div class="section-content">
             <ul>
-                <li>Best Poster Presentation Award – COSM-AHNSF (2025)</li>
-                <li>COE Outstanding Graduate Student Award – Northeastern University (2025)</li>
-                <li>COE Outstanding Graduate Student Award – Northeastern University (2024)</li>
-                <li>Best of Scientific Orals – AAO-HNSF Annual Meeting & OTO EXPO (2024)</li>
+                <li><strong>Best Paper Award Nominee</strong> — International Conference on 3D Vision (3DV 2026)
+                    <span class="badge badge-nominee">Nominee</span><br>
+                    <span style="font-size:0.88rem; color:#555;">For "Look Around and Pay Attention: Multi-camera Point Tracking Reimagined with Transformers"</span></li>
+                <li><strong>Best Poster Presentation Award</strong> — COSM-AHNSF (Spring 2025)</li>
+                <li><strong>COE Outstanding Graduate Student Award</strong> — Northeastern University (2025)</li>
+                <li><strong>COE Outstanding Graduate Student Award</strong> — Northeastern University (2024)</li>
+                <li><strong>Best of Scientific Orals</strong> — AAO-HNSF Annual Meeting &amp; OTO EXPO (2024)</li>
             </ul>
         </div>
     </section>
@@ -353,13 +501,13 @@ footer {
                 <li><a href="resources/CV_Bishoy_Galoaa_2025.pdf">Download CV</a></li>
                 <!-- <li><a href="https://www.mgbmskoncology.org/" target="_blank">MGB MSK Oncology Tool</a></li> -->
                 <!-- <li><a href="https://cancercloudai.org/" target="_blank">CancerCloud AI</a></li> -->
-                <li><a href="mailto:galoaa.b@northeastern.edu">Email Me</a></li>
+                <!-- <li><a href="mailto:galoaa.b@northeastern.edu">Email Me</a></li> -->
             </ul>
         </div>
     </section>
     
     <footer>
-        &copy; 2025 Bishoy M. Galoaa • Boston, MA
+        &copy; 2026 Bishoy M. Galoaa • Boston, MA
     </footer>
 </main>
 
