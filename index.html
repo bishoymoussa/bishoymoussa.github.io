@@ -297,6 +297,7 @@ footer {
 .badge-link:hover { text-decoration: underline; }
 .badge-arxiv { background: #fdecea; color: #b31b1b; border: 1px solid #f0b8b0; }
 .badge-github { background: #24292f; color: #fff; border: 1px solid #24292f; }
+.badge-hf { background: #fff7d6; color: #6b4e00; border: 1px solid #f0d878; }
 .badge-new { background: #fdecea; color: #8a1a0a; border: 1px solid #f5b0a0; }
 </style>
 </head>
@@ -519,6 +520,20 @@ footer {
 
     <section>
         <div class="section-header" onclick="toggleSection(this.parentNode)">
+            <h2>Datasets</h2>
+            <span class="toggle-icon">↓</span>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes" target="_blank">Motion-o-MCoT (PLM + motion keyframes)</a></strong> — 3,168 training examples of motion-centric chain-of-thought reasoning with sharded keyframes, a subset of STGR.
+                    <a class="badge badge-link badge-hf" href="https://huggingface.co/datasets/bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes" target="_blank" data-hf-dataset="bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes">🤗 downloads</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-header" onclick="toggleSection(this.parentNode)">
             <h2>Talks</h2>
             <span class="toggle-icon">↓</span>
         </div>
@@ -627,6 +642,14 @@ footer {
             professorDropdownContent.classList.remove('active');
         });
     });
+</script>
+<script>
+document.querySelectorAll('[data-hf-dataset]').forEach(function(el){
+    fetch('https://huggingface.co/api/datasets/'+el.dataset.hfDataset)
+        .then(function(r){return r.json();})
+        .then(function(d){ if (typeof d.downloads==='number') el.textContent='🤗 '+d.downloads.toLocaleString()+' downloads'; })
+        .catch(function(){});
+});
 </script>
 </body>
 </html>
