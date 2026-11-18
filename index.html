@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Bishoy M. Galoaa">
-<title>Bishoy Galoaa</title>
+<meta name="description" content="Bishoy M. Galoaa, PhD student at Northeastern University researching the foundations of visual intelligence and visual learning.">
+<title>Bishoy M. Galoaa | Visual Intelligence Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Spectral:ital,wght@0,500;0,600;1,500&amp;display=swap">
+<link rel="stylesheet" href="style.css">
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4E8G468480"></script> 
 <script> 
@@ -13,363 +18,49 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date()); 
 gtag('config', 'G-4E8G468480'); 
 </script>
-<style>
-/* Minimalist style for Bishoy Galoaa's academic site */
-body {
-    font-family: 'Georgia', serif;
-    color: #1a1a1a;
-    background-color: #fefefe;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-}
-
-.hero {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.profile {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    margin-bottom: 1rem;
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
-}
-
-.tagline {
-    font-style: italic;
-    color: #444;
-}
-
-.social-links {
-    margin: 1rem 0;
-}
-
-.social-links a {
-    margin: 0 0.3rem;
-}
-
-.quote {
-    font-size: 1.1rem;
-    margin: 2rem 0;
-    padding-left: 1rem;
-    border-left: 3px solid #ccc;
-    color: #333;
-    font-family: 'Palatino Linotype', serif;
-}
-
-.quote span {
-    display: block;
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 0.5rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-.section-header {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: 1.3rem;
-    color: #222;
-    margin: 0;
-}
-
-.toggle-icon {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-}
-
-.collapsed .toggle-icon {
-    transform: rotate(-90deg);
-}
-
-.section-content {
-    transition: max-height 0.5s ease, opacity 0.3s ease;
-    max-height: 1000px;
-    opacity: 1;
-    overflow: hidden;
-}
-
-.collapsed .section-content {
-    max-height: 0;
-    opacity: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-ul {
-    list-style: disc;
-    padding-left: 1.5rem;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-
-li {
-    margin-bottom: 0.7rem;
-    max-width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-
-.section-content {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-a {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.links ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.links li {
-    margin-bottom: 0.5rem;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #666;
-    margin-top: 3rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-}
-
-/* Enhanced interactive dropdown styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    color: #0056b3;
-    border-bottom: 1px dotted #0056b3;
-    cursor: pointer;
-}
-
-.dropdown-text {
-    display: inline-block;
-    color: inherit;
-}
-
-.dropdown-content {
-    visibility: hidden;
-    position: absolute;
-    background-color: white;
-    min-width: 180px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-    border-radius: 6px;
-    padding: 0;
-    z-index: 1;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s, transform 0.3s;
-    left: 50%;
-    margin-left: -90px; /* Half of the min-width */
-    top: 100%;
-    margin-top: 8px;
-    overflow: hidden;
-}
-
-.dropdown-content:before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    margin-left: -8px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid white;
-}
-
-.dropdown-content.active {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.dropdown-content a {
-    color: #0056b3;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-bottom: 1px solid #f2f2f2;
-    transition: background-color 0.2s;
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #f5f8fa;
-    text-decoration: none;
-}
-
-.dropdown-content a i {
-    margin-right: 8px;
-    opacity: 0.7;
-}
-
-.insight-box {
-    background: #f9f9f9;
-    border-left: 3px solid #888;
-    padding: 1rem 1.2rem;
-    margin: 1.2rem 0;
-    border-radius: 0 6px 6px 0;
-}
-.insight-box p { margin: 0 0 0.6rem 0; font-size: 0.95rem; color: #333; }
-.insight-box p:last-child { margin-bottom: 0; }
-.video-wrap {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    margin: 1rem auto 0.5rem auto;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    max-width: 560px;
-}
-.video-wrap video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: 0;
-}
-.video-caption {
-    font-size: 0.82rem;
-    color: #555;
-    font-style: italic;
-    text-align: center;
-    margin-top: 0.3rem;
-}
-
-.badge {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-family: 'Georgia', serif;
-    padding: 1px 6px;
-    border-radius: 3px;
-    margin-left: 6px;
-    vertical-align: middle;
-}
-.badge-oral { background: #e8f4e8; color: #2a6e2a; border: 1px solid #b0d8b0; }
-.badge-spotlight { background: #fff4e0; color: #7a4f00; border: 1px solid #f5d080; }
-.badge-nominee { background: #f0eaff; color: #4a2a8a; border: 1px solid #c5aff0; }
-.badge-preprint { background: #f5f5f5; color: #555; border: 1px solid #ccc; }
-.badge-link { text-decoration: none; }
-.badge-link:hover { text-decoration: underline; }
-.badge-arxiv { background: #fdecea; color: #b31b1b; border: 1px solid #f0b8b0; }
-.badge-github { background: #24292f; color: #fff; border: 1px solid #24292f; }
-.badge-hf { background: #fff7d6; color: #6b4e00; border: 1px solid #f0d878; }
-.badge-new { background: #fdecea; color: #8a1a0a; border: 1px solid #f5b0a0; }
-</style>
 </head>
 <body>
-<main>
-    <section class="hero">
-        <img src="resources/1727639612700.jpeg" alt="Bishoy Galoaa" class="profile">
-        <h1>Bishoy M. Galoaa</h1>
-        <p class="tagline">PhD Student • Machine Learning Researcher • Engineer</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/bishoy-galoaa-153668149/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/bishoymoussa" target="_blank">GitHub</a> |
-            <a class="badge badge-link badge-hf" href="https://huggingface.co/bishoygaloaa" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; white-space: nowrap;"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="" width="18" height="18" style="vertical-align: middle; margin-right: 4px;">Hugging Face</a> |
-            <a href="https://scholar.google.com/citations?user=tuwQ2GgAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-            <a href="mailto:galoaa.b@northeastern.edu">galoaa.b@northeastern.edu</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-name" href="#top">Bishoy M. Galoaa</a>
+        <div class="nav-links">
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#datasets">Datasets</a>
+            <a href="resources/CV_Bishoy_Galoaa_2026.pdf">CV</a>
         </div>
-    </section>
-    
-    <blockquote class="quote">
-        "The real question is not whether machines think but whether men do. The mystery which surrounds a thinking machine already surrounds a thinking man."<br>
-        <span>– B.F. Skinner</span>
-    </blockquote>
-    
-    <section>
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>About Me</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
-        <div class="section-content">
-            <p>I'm an upcoming PhD student in the Electrical and Computer Engineering department at Northeastern University's College of Engineering. I work under the supervision of <a href="https://coe.northeastern.edu/people/ostadabbas-sarah/" target="_blank">Prof. Sarah Ostadabbas</a> in the <a href="https://ostadabbas.sites.northeastern.edu/" target="_blank">Augmented Cognition Lab (ACLab)</a>. My research centers on <strong>motion-centric video understanding and reasoning</strong> — building systems that don't merely extrapolate visual patterns, but <em>deduce</em> causal structure from observed motion. I'm particularly interested in how vision-language models can move beyond statistical pattern completion toward genuine physical and spatial reasoning. This connects to broader work in multi-object tracking, human-machine interaction, and medical AI.</p>
-        </div>
-    </section>
-    
-    <section>
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>Motion-Centric Reasoning &amp; Vision-Language Models</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
-        <div class="section-content">
-            <p>A core challenge I'm pursuing: most current VLMs act as <em>stochastic extrapolators</em>. Trained on massive visual corpora, they bias toward the statistically probable — a pendulum seen swinging to Point B is predicted to return to Point A, because that completes a symmetric arc. But this ignores the physics: initial conditions, energy dissipation, non-conservative forces. The model pattern-matches; it doesn't <em>reason</em>.</p>
+    </nav>
 
-            <div class="insight-box">
-                <p><strong>The Extrapolator vs. The Visual Observer</strong></p>
-                <p><strong>Extrapolator (current VLMs):</strong> sees the arc → assumes a periodic function → predicts completion. Prioritizes visual symmetry over physical constraints.</p>
-                <p><strong>Visual Observer (the goal):</strong> observes initial state, recognizes constraints (fixed pivot, gravity, friction), accounts for hidden dissipative variables → deduces that the return height must be h<sub>final</sub> &lt; h<sub>initial</sub>.</p>
-                <p>Walter Lewin famously put his nose — and his life — on the line to demonstrate this principle:</p>
-                <div class="video-wrap">
-                    <video controls autoplay width="560" height="315">
-                        <source src="resources/motion_demo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <p class="video-caption">Prof. Walter Lewin releases a 15 kg pendulum from his chin. He trusts physics — a true push would smash his face. Energy is conserved, not extrapolated.</p>
-                <p style="margin-top:0.8rem; font-size:0.9rem;">My work on motion-centric systems aims to bridge this gap: from pattern completion to causal deduction.</p>
-            </div>
-
-            <ul>
-                <li><strong>Motion-Centric Video Understanding:</strong> Query-free motion discovery and description systems that autonomously identify and describe events in videos, and text-to-motion generation (Lang2Motion) enabling natural language control of motion synthesis.</li>
-                <li><strong>Multi-Object Tracking:</strong> Transformer-enhanced and graph-based algorithms for tracking in complex environments — including occlusions, crowded scenes, and multi-camera setups.</li>
-                <li><strong>Spatial Reasoning in VLMs:</strong> Learning structured spatial and counting reasoning from pedagogically-organized video content.</li>
-                <li><strong>Human-Machine Interaction:</strong> Motion analysis and uncertainty-aware anomaly detection for exoskeleton control and rehabilitation.</li>
-                <li><strong>Medical AI:</strong> Personalized prognostic models for oncology via interpretable machine learning.</li>
+<main id="main">
+    <header class="hero" id="top">
+        <div>
+            <h1>Bishoy M. Galoaa</h1>
+            <p class="affiliation">PhD student in Electrical and Computer Engineering<br>
+                Northeastern University</p>
+            <p class="bio">I work with <a href="https://coe.northeastern.edu/people/ostadabbas-sarah/">Sarah Ostadabbas</a> in the <a href="https://ostadabbas.sites.northeastern.edu/">Augmented Cognition Lab</a>.</p>
+            <ul class="profile-links" aria-label="Contact and profiles">
+                <li><a href="mailto:galoaa.b@northeastern.edu">Email</a></li>
+                <li><a href="https://scholar.google.com/citations?user=tuwQ2GgAAAAJ&amp;hl=en">Google Scholar</a></li>
+                <li><a href="https://github.com/bishoymoussa">GitHub</a></li>
+                <li><a href="https://huggingface.co/bishoygaloaa">Hugging Face</a></li>
+                <li><a href="https://www.linkedin.com/in/bishoy-galoaa-153668149/">LinkedIn</a></li>
             </ul>
         </div>
+        <img src="resources/1727639612700.jpeg" alt="Portrait of Bishoy Galoaa" class="profile" width="196" height="196">
+    </header>
+
+    <section id="research" aria-labelledby="research-heading">
+        <h2 id="research-heading">Research</h2>
+        <p class="research-statement">I study the <strong>foundations of visual intelligence and visual learning</strong>. I want to understand how machines learn from visual experience, and how those learned representations support perception, reasoning, and generation.</p>
+        <p class="research-statement">I use motion, space, and physical interactions to study what visual models learn about the world. My goal is to build systems that use that knowledge to interpret what they see and generate scenes and events that are consistent with how the world works.</p>
+        <blockquote class="quote">
+            <p>“What must a system learn about the world to recognize what it sees, infer what it cannot see, and imagine what could happen next?”</p>
+        </blockquote>
     </section>
-    
-    <section>
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>Publications</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
-        <div class="section-content" style="display: block; max-height: none; opacity: 1;">
+
+    <section id="publications" aria-labelledby="publications-heading">
+        <h2 id="publications-heading">Publications</h2>
+        <div class="section-content">
             <p style="font-weight:bold; color:#222; margin-bottom:0.5rem;">2027</p>
             <ul>
                 <li>
@@ -509,86 +200,24 @@ footer {
         </div>
     </section>
 
-    <section>
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>Projects & Products</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
+    <section id="datasets" aria-labelledby="datasets-heading">
+        <h2 id="datasets-heading">Datasets</h2>
         <div class="section-content">
-            <ul>
-                <li><strong><a href="https://github.com/bishoymoussa/anvil" target="_blank">Anvil</a></strong> — A research-first, evaluation-first inference library for LLMs with reproducible manifests, per-request logits processors, and built-in support for DoLa contrastive decoding. Available on <a href="https://pypi.org/project/anvil-eval/" target="_blank">PyPI</a>: <code>pip install anvil-eval</code>
-                <br><span style="margin-top: 0.5rem; display: inline-block;">
-                    <a href="https://pepy.tech/project/anvil-eval" target="_blank">
-                        <img src="https://static.pepy.tech/badge/anvil-eval/month" alt="Downloads per month" style="vertical-align: middle;">
-                    </a>
-                </span>
-                </li>
+            <ul class="resource-list">
+                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/phillm-data">PhiLLM Data</a></strong>
+                    <p>Synthetic Newtonian point-mass problems with exact simulator ground truth.</p></li>
+                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/phillm-results">PhiLLM Results</a></strong>
+                    <p>Evaluation metrics, model predictions, and figures from experiments on Newtonian reasoning.</p></li>
+                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes">Motion-o-MCoT (PLM + motion keyframes)</a></strong>
+                    <p>3,168 training examples of motion-centric chain-of-thought reasoning with sharded keyframes, a subset of STGR.</p></li>
+                <li><strong><a href="https://huggingface.co/datasets/augmentedcognitionlab/MotionBlind">MotionBlind</a></strong>
+                    <p>A contrastive benchmark for physical-motion perception in Video-LLMs, from <em>MotionBlind: Probing the Illusion of Motion Understanding in Video-LLMs</em>.</p></li>
             </ul>
         </div>
     </section>
 
-    <section>
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>Datasets</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
-        <div class="section-content">
-            <ul>
-                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes" target="_blank">Motion-o-MCoT (PLM + motion keyframes)</a></strong> — 3,168 training examples of motion-centric chain-of-thought reasoning with sharded keyframes, a subset of STGR.
-                    <a class="badge badge-link badge-hf" href="https://huggingface.co/datasets/bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes" target="_blank" data-hf-dataset="bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes">🤗 downloads</a>
-                </li>
-                <li><strong><a href="https://huggingface.co/datasets/augmentedcognitionlab/MotionBlind" target="_blank">MotionBlind</a></strong> — A contrastive benchmark for physical-motion perception in Video-LLMs, from <em>MotionBlind: Probing the Illusion of Motion Understanding in Video-LLMs</em>.
-                    <a class="badge badge-link badge-hf" href="https://huggingface.co/datasets/augmentedcognitionlab/MotionBlind" target="_blank" data-hf-dataset="augmentedcognitionlab/MotionBlind">🤗 downloads</a>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>Talks</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
-        <div class="section-content">
-            <ul>
-                <li><strong><a href="https://www.youtube.com/watch?v=_YGwkrERpxs" target="_blank">Look Around and Pay Attention: Multi-camera Point Tracking Reimagined with Transformers</a></strong> — Presentation on the LAPA paper (Best Paper Award, 3DV 2026)</li>
-                <li><strong><a href="https://www.youtube.com/watch?v=UDscAJ-t8a0" target="_blank">What Remains Unsolved in Computer Vision? Rethinking the Boundaries of State-of-the-Art</a></strong> — Discussion on open challenges and future directions in computer vision research</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>30-Day Novel Ideas Challenge</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
-        <div class="section-content">
-            <p>This section highlights a creative experiment where I aimed to build one novel idea per day over a month.</p>
-    
-            <!-- Progress bar -->
-            <div style="margin: 1rem 0;">
-                <label for="progress" style="display: block; font-weight: bold; margin-bottom: 0.3rem;">Progress: 5 / 30 ideas</label>
-                <div style="background-color: #e0e0e0; border-radius: 8px; height: 20px; width: 100%;">
-                    <div style="width: 16.66%; background-color: #636363; height: 100%; border-radius: 8px;"></div>
-                </div>
-            </div>
-    
-            <ul>
-                <li><a href="https://github.com/bishoymoussa/inattention-notabene" target="_blank">Inattention NotaBene</a> – A novel regularization method that strategically "forgets" less important features through a stacked dropout mechanism, offering an alternative to traditional attention mechanisms.</li>
-                <li><a href="https://github.com/bishoymoussa/ROCKET" target="_blank">ROCKET</a> – An innovative path planning system that identifies collision paths first to find optimal trajectories in complex environments using inverse collision sampling.</li>
-                <li><a href="https://github.com/bishoymoussa/secretary-template-matching" target="_blank">Secretary Template Matching</a> – An online template matching algorithm inspired by the Secretary Problem, dynamically adjusting thresholds based on observed data patterns for improved real-time decision-making.</li>
-                <li><a href="https://github.com/bishoymoussa/2F1B" target="_blank">2F1B</a> – A novel optimization technique introducing controlled oscillation in neural network training by alternating two forward steps with one backward step, enhancing the optimization trajectory.</li>
-                <li><a href="https://github.com/bishoymoussa/knock-knock" target="_blank">Knock-Knock</a> – An optimization algorithm inspired by bat echolocation, emitting "echo signals" to navigate complex loss landscapes effectively.</li>
-            </ul>
-            <p>Originally shared as a public challenge on <a href="https://www.linkedin.com/in/bishoy-galoaa-153668149/" target="_blank">LinkedIn</a>.</p>
-        </div>
-    </section>
-    
-    <section>
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>Awards</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
+    <section id="awards" aria-labelledby="awards-heading">
+        <h2 id="awards-heading">Awards</h2>
         <div class="section-content">
             <ul>
                 <li><strong>Best Paper Award</strong> — International Conference on 3D Vision (3DV 2026)
@@ -601,67 +230,43 @@ footer {
             </ul>
         </div>
     </section>
-    
-    <section class="links">
-        <div class="section-header" onclick="toggleSection(this.parentNode)">
-            <h2>More</h2>
-            <span class="toggle-icon">↓</span>
-        </div>
+
+    <section id="talks" aria-labelledby="talks-heading">
+        <h2 id="talks-heading">Talks</h2>
         <div class="section-content">
             <ul>
-                <li><a href="resources/CV_Bishoy_Galoaa_2026.pdf">Download CV</a></li>
-                <!-- <li><a href="https://www.mgbmskoncology.org/" target="_blank">MGB MSK Oncology Tool</a></li> -->
-                <!-- <li><a href="https://cancercloudai.org/" target="_blank">CancerCloud AI</a></li> -->
-                <!-- <li><a href="mailto:galoaa.b@northeastern.edu">Email Me</a></li> -->
+                <li><strong><a href="https://www.youtube.com/watch?v=_YGwkrERpxs" target="_blank">Look Around and Pay Attention: Multi-camera Point Tracking Reimagined with Transformers</a></strong> — Presentation on the LAPA paper (Best Paper Award, 3DV 2026)</li>
+                <li><strong><a href="https://www.youtube.com/watch?v=UDscAJ-t8a0" target="_blank">What Remains Unsolved in Computer Vision? Rethinking the Boundaries of State-of-the-Art</a></strong> — Discussion on open challenges and future directions in computer vision research</li>
             </ul>
         </div>
     </section>
-    
+
+    <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Software</h2>
+        <div class="section-content">
+            <ul>
+                <li><strong><a href="https://github.com/bishoymoussa/anvil" target="_blank">Anvil</a></strong> — A research-first, evaluation-first inference library for LLMs with reproducible manifests, per-request logits processors, and built-in support for DoLa contrastive decoding. Available on <a href="https://pypi.org/project/anvil-eval/" target="_blank">PyPI</a>: <code>pip install anvil-eval</code>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <details class="archive">
+        <summary>30-Day Novel Ideas Challenge</summary>
+            <p>I set out to develop one new idea per day for a month and published five ideas.</p>
+            <ul>
+                <li><a href="https://github.com/bishoymoussa/inattention-notabene" target="_blank">Inattention NotaBene</a> – A novel regularization method that strategically "forgets" less important features through a stacked dropout mechanism, offering an alternative to traditional attention mechanisms.</li>
+                <li><a href="https://github.com/bishoymoussa/ROCKET" target="_blank">ROCKET</a> – An innovative path planning system that identifies collision paths first to find optimal trajectories in complex environments using inverse collision sampling.</li>
+                <li><a href="https://github.com/bishoymoussa/secretary-template-matching" target="_blank">Secretary Template Matching</a> – An online template matching algorithm inspired by the Secretary Problem, dynamically adjusting thresholds based on observed data patterns for improved real-time decision-making.</li>
+                <li><a href="https://github.com/bishoymoussa/2F1B" target="_blank">2F1B</a> – A novel optimization technique introducing controlled oscillation in neural network training by alternating two forward steps with one backward step, enhancing the optimization trajectory.</li>
+                <li><a href="https://github.com/bishoymoussa/knock-knock" target="_blank">Knock-Knock</a> – An optimization algorithm inspired by bat echolocation, emitting "echo signals" to navigate complex loss landscapes effectively.</li>
+            </ul>
+            <p>Originally shared as a public challenge on <a href="https://www.linkedin.com/in/bishoy-galoaa-153668149/" target="_blank">LinkedIn</a>.</p>
+    </details>
+
     <footer>
-        &copy; 2026 Bishoy M. Galoaa • Boston, MA
+        &copy; 2026 Bishoy M. Galoaa · Boston, MA
     </footer>
 </main>
-
-<script>
-    // Function to toggle section collapse
-    function toggleSection(section) {
-        section.classList.toggle('collapsed');
-    }
-    
-    // Set up the Professor dropdown with click functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get the dropdown element
-        const professorDropdown = document.getElementById('professor-dropdown');
-        const professorDropdownContent = professorDropdown.querySelector('.dropdown-content');
-        
-        // Add click event to the dropdown
-        professorDropdown.addEventListener('click', function(event) {
-            // Stop event from bubbling up to parent elements
-            event.stopPropagation();
-            
-            // Toggle active class on dropdown content
-            professorDropdownContent.classList.toggle('active');
-        });
-        
-        // Make sure clicking links in the dropdown doesn't close sections
-        professorDropdownContent.addEventListener('click', function(event) {
-            // Stop propagation to prevent section toggle
-            event.stopPropagation();
-        });
-        
-        // Close dropdown when clicking elsewhere on the page
-        document.addEventListener('click', function() {
-            professorDropdownContent.classList.remove('active');
-        });
-    });
-</script>
-<script>
-document.querySelectorAll('[data-hf-dataset]').forEach(function(el){
-    fetch('https://huggingface.co/api/datasets/'+el.dataset.hfDataset)
-        .then(function(r){return r.json();})
-        .then(function(d){ if (typeof d.downloads==='number') el.textContent='🤗 '+d.downloads.toLocaleString()+' downloads'; })
-        .catch(function(){});
-});
-</script>
 </body>
 </html>
