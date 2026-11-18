@@ -129,7 +129,13 @@ main > section, .archive, footer {
     font: italic 500 1.1rem/1.5 var(--serif);
 }
 
-.quote p { margin: 0; }
+.quote blockquote, .quote p { margin: 0; }
+
+.quote figcaption {
+    margin-top: .35rem;
+    color: var(--muted);
+    font: .95rem/1.4 var(--sans);
+}
 
 .section-content ul, .archive ul { padding-inline-start: 1.15rem; }
 .section-content li, .archive li { margin-bottom: .55rem; }
