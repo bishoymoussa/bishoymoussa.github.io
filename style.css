@@ -159,6 +159,7 @@ main > section, .archive, footer {
 #publications li > strong { color: var(--ink); }
 .resource-list li { margin-bottom: .9rem; }
 .resource-list li:last-child { margin-bottom: 0; }
+.dataset-downloads { font-size: .9rem; color: var(--muted); white-space: nowrap; }
 .resource-list p { margin: .1rem 0 0; color: var(--muted); }
 
 .badge {

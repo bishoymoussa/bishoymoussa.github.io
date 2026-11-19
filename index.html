@@ -207,13 +207,13 @@ gtag('config', 'G-4E8G468480');
         <h2 id="datasets-heading">Datasets</h2>
         <div class="section-content">
             <ul class="resource-list">
-                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/phillm-data">PhiLLM Data</a></strong>
+                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/phillm-data">PhiLLM Data</a></strong> <span class="dataset-downloads" data-hf-dataset="bishoygaloaa/phillm-data" hidden></span>
                     <p>Synthetic Newtonian point-mass problems with exact simulator ground truth.</p></li>
-                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/phillm-results">PhiLLM Results</a></strong>
+                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/phillm-results">PhiLLM Results</a></strong> <span class="dataset-downloads" data-hf-dataset="bishoygaloaa/phillm-results" hidden></span>
                     <p>Evaluation metrics, model predictions, and figures from experiments on Newtonian reasoning.</p></li>
-                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes">Motion-o-MCoT (PLM + motion keyframes)</a></strong>
+                <li><strong><a href="https://huggingface.co/datasets/bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes">Motion-o-MCoT (PLM + motion keyframes)</a></strong> <span class="dataset-downloads" data-hf-dataset="bishoygaloaa/Motion-o-MCoT-PLM-motion-keyframes" hidden></span>
                     <p>3,168 training examples of motion-centric chain-of-thought reasoning with sharded keyframes, a subset of STGR.</p></li>
-                <li><strong><a href="https://huggingface.co/datasets/augmentedcognitionlab/MotionBlind">MotionBlind</a></strong>
+                <li><strong><a href="https://huggingface.co/datasets/augmentedcognitionlab/MotionBlind">MotionBlind</a></strong> <span class="dataset-downloads" data-hf-dataset="augmentedcognitionlab/MotionBlind" hidden></span>
                     <p>A contrastive benchmark for physical-motion perception in Video-LLMs, from <em>MotionBlind: Probing the Illusion of Motion Understanding in Video-LLMs</em>.</p></li>
             </ul>
         </div>
@@ -272,5 +272,20 @@ gtag('config', 'G-4E8G468480');
         &copy; 2026 Bishoy M. Galoaa · Boston, MA
     </footer>
 </main>
+<script>
+document.querySelectorAll('[data-hf-dataset]').forEach(async (element) => {
+    try {
+        const response = await fetch('https://huggingface.co/api/datasets/' + element.dataset.hfDataset);
+        if (!response.ok) return;
+        const data = await response.json();
+        if (!Number.isInteger(data.downloads) || data.downloads < 0) return;
+        element.textContent = '· ' + data.downloads.toLocaleString('en-US') + ' downloads / month';
+        element.title = 'Downloads in the last 30 days on Hugging Face';
+        element.hidden = false;
+    } catch {
+        // Keep the dataset link usable when download counts are unavailable.
+    }
+});
+</script>
 </body>
 </html>
