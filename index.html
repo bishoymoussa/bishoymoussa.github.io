@@ -275,12 +275,12 @@ gtag('config', 'G-4E8G468480');
 <script>
 document.querySelectorAll('[data-hf-dataset]').forEach(async (element) => {
     try {
-        const response = await fetch('https://huggingface.co/api/datasets/' + element.dataset.hfDataset);
+        const response = await fetch('https://huggingface.co/api/datasets/' + element.dataset.hfDataset + '?expand[]=downloadsAllTime');
         if (!response.ok) return;
         const data = await response.json();
-        if (!Number.isInteger(data.downloads) || data.downloads < 0) return;
-        element.textContent = '· ' + data.downloads.toLocaleString('en-US') + ' downloads / month';
-        element.title = 'Downloads in the last 30 days on Hugging Face';
+        if (!Number.isInteger(data.downloadsAllTime) || data.downloadsAllTime < 0) return;
+        element.textContent = '· ' + data.downloadsAllTime.toLocaleString('en-US') + ' downloads';
+        element.title = 'Total downloads on Hugging Face';
         element.hidden = false;
     } catch {
         // Keep the dataset link usable when download counts are unavailable.
